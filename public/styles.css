@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.filter {
+  margin: 40px;
+}
+@media (max-width: 768px) {
+  .filter .filter-bar {
+    flex-direction: column;
+  }
+}
+.filter .filter-bar {
+  display: flex;
+  width: 100%;
+  gap: 5%;
+  align-items: center;
+}
+.filter .filter-bar .name {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #eeeeee;
+  border: none;
+  width: 100%;
+}
+.filter .filter-bar .name:focus {
+  outline: 1px solid black;
+  outline: dotted;
+}
+.filter .filter-bar .dates {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+.filter .filter-bar .categories {
+  width: 100%;
+}
+
+.posts-area {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 50px;
+}
+
+.post {
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.post:hover {
+  transform: scale(1.02);
+}
+.post h2 {
+  color: #24eba3;
+  margin: 0.4em 0;
+}
+.post .sub-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.post .sub-bar h4 {
+  color: #9a9a9a;
+  font-weight: 300;
+  margin: 0.4em 0;
+}
+.post .sub-bar .name-bar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.post .sub-bar .name-bar img {
+  border-radius: 50%;
+  margin-left: 1em;
+  border: 0.2px solid black;
+}
+.post .category-bar {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.3rem;
+}
+.post .category-bar .category {
+  list-style: none;
+  padding: 0.1rem 0.7rem;
+  margin: 0.3rem 0;
+  border-radius: 10px;
+  border: 1px solid brown;
+}
+
+.loadmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+  position: relative;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgba(36, 235, 163, 0.5), transparent);
+}
+.loadmore button {
+  font-size: 3rem;
+  background-color: transparent;
+  color: #24eba3;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.loadmore button:hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=styles.css.map */
