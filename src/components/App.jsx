@@ -2,9 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 import Post from './Post';
 import Select from 'react-select';
 
+// I have just realized after finishing it that I could have used query search
+// parameters and modified the backend to implement to filter much more simply
+// My solution here is totally on the frontend
+
 function App() {
   const [allPosts, setAllPosts] = useState([]);
-  // value store, so use Ref
   const searchedNameRef = useRef([]);
   const searchedBeforeDateRef = useRef([]);
   const searchedAfterDateRef = useRef([]);
